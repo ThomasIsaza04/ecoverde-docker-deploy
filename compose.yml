@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  web-institucional:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecoverde_web_app
+    ports:
+      - "8080:80"
+    volumes:
+      - ecoverde_vol_datos:/usr/share/nginx/html
+    networks:
+      - ecoverde_red_local
+    restart: always
+
+  soporte-respaldo:
+    image: alpine
+    container_name: ecoverde_soporte_backup
+    command: /bin/sh -c "while true; do echo 'Servicio de respaldo EcoVerde activo...'; sleep 3600; done"
+    networks:
+      - ecoverde_red_local
+    restart: always
+
+volumes:
+  ecoverde_vol_datos:
+    name: ecoverde_persistencia
+
+networks:
+  ecoverde_red_local:
+    name: ecoverde_red_personalizada
+    driver: bridge
