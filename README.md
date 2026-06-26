@@ -54,9 +54,3 @@ Durante esta semana se implementaron prácticas de Infraestructura como Código 
 - Monitoreo de recursos mediante `docker stats`.
 - Recolección de eventos y logs desde Kubernetes.
 - Almacenamiento de evidencias en `observabilidad/evidencias.md`.
-
-<img width="1366" height="720" alt="Image" src="https://github.com/user-attachments/assets/84f2f2b7-eadd-4fae-bd56-538967922b3e" />
-
-
-
-
