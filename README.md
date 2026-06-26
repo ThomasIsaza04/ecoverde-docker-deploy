@@ -55,9 +55,8 @@ Durante esta semana se implementaron prácticas de Infraestructura como Código 
 - Recolección de eventos y logs desde Kubernetes.
 - Almacenamiento de evidencias en `observabilidad/evidencias.md`.
 
-<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/7a57c46b-5dc7-4d9b-a518-72da90d489b0" />
+<img width="1366" height="720" alt="Image" src="https://github.com/user-attachments/assets/ccf54495-d8bf-45ce-8cd4-d0f49ed20b6c" />
 
-<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/87e85da8-e0f0-4f9b-a02a-bafa916802b9" />
 
 
 
