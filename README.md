@@ -34,7 +34,23 @@ docker ps
 # Visualizar las imágenes creadas en el equipo local
 docker images
 
+
 ## Semana 10 — IaC y Observabilidad
 
-Se agrega configuración de Infraestructura como Código con Terraform,
-manifiestos Kubernetes, y evidencias de observabilidad mediante logs y métricas.
+Durante esta semana se implementaron prácticas de Infraestructura como Código y observabilidad para el proyecto EcoVerde Antioquia S.A.S.
+
+### Infraestructura como Código (Terraform)
+- Creación del directorio `iac/`.
+- Definición del archivo `main.tf`.
+- Generación automática del archivo `infra-generada.txt` mediante Terraform ejecutado desde Docker.
+
+### Kubernetes
+- Creación del manifiesto `deployment.yaml` para desplegar la aplicación.
+- Creación del manifiesto `service.yaml` para exponer el servicio mediante NodePort.
+- Despliegue y validación de pods y servicios usando `kubectl`.
+
+### Observabilidad
+- Consulta de logs utilizando `docker logs`.
+- Monitoreo de recursos mediante `docker stats`.
+- Recolección de eventos y logs desde Kubernetes.
+- Almacenamiento de evidencias en `observabilidad/evidencias.md`.
