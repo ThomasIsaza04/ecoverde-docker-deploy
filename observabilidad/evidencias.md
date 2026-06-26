@@ -53,3 +53,32 @@
 172.17.0.1 - - [26/Jun/2026:01:30:04 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
 172.17.0.1 - - [26/Jun/2026:01:30:04 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
 172.17.0.1 - - [26/Jun/2026:01:30:05 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
+
+Observabilidad en Kubernetes
+Estado de los pods
+NAME                            READY   STATUS    RESTARTS   AGE
+web-ecoverde-55fc967bb4-nzk6d   1/1     Running   0          21m
+web-ecoverde-55fc967bb4-p7mq8   1/1     Running   0          21m
+Eventos del clúster
+
+Se verificó el proceso de despliegue y creación de pods mediante:
+
+kubectl get events --sort-by=.metadata.creationTimestamp
+
+Los eventos mostraron:
+
+Creación del ReplicaSet.
+Descarga de la imagen nginx:alpine.
+Creación y arranque exitoso de los contenedores.
+Asignación correcta de los pods al nodo del clúster.
+Métricas de Kubernetes
+
+Se ejecutó:
+
+kubectl top pods
+
+Resultado:
+
+error: Metrics API not available
+
+Esto indica que el clúster no tiene instalado el componente Metrics Server, encargado de recolectar métricas de CPU y memoria de los pods.
